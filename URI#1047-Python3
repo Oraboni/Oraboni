@@ -1,0 +1,30 @@
+c1,c2,t1,t2=input().split()
+c1,c2,t1,t2=int(c1),int(c2),int(t1),int(t2)
+
+tc=(c1*3600)+(c2*60)
+tt=(t1*3600)+(t2*60)
+
+tsc=0
+h=0
+m=0
+
+if tc < tt:
+    tsc=tt-tc
+
+if tc>tt:
+    th=((24-c1)+t1)*3600
+    tm=((60-c2)+t2)*60
+    tsc=th+tm
+    h=-1
+
+while tsc>=3600:
+    tsc=tsc-3600
+    h=h+1
+while tsc>=60:
+    tsc=tsc-60
+    m=m+1
+
+if not c1==c2==t1==t2:
+    print('O JOGO DUROU %d HORA(S) E %d MINUTO(S)' %(h,m))
+if c1==c2==t1==t2:
+    print('O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)')
