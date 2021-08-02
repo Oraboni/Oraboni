@@ -1,0 +1,17 @@
+m1=0
+m2=0
+m3=0
+
+org=[]
+a1=int(input())
+a2=int(input())
+a3=int(input())
+m1=(a2*2)+(a3*4)
+m2=(a1*2)+(a3*2)
+m3=(a1*4)+(a2*2)
+
+org.append(m1)
+org.append(m2)
+org.append(m3)
+
+print(min(org))
