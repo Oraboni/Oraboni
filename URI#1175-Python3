@@ -1,0 +1,15 @@
+lis=[]
+lp=19
+px=0
+
+for i in range(20):
+    x = int(input())
+    lis.append(x)
+
+for z in range(10):
+    px=lis[z]
+    lis[z]=lis[lp]
+    lis[lp]=px
+    lp=lp-1
+for a in range(20):
+    print('N[%d] = %d' %(a,lis[a]))
